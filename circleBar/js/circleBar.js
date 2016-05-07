@@ -45,7 +45,7 @@
 			
 		},
 		moveTo:function(num){
-			if(num>=0&&num<=100){
+			if(num>=0&&num<=100&&!this.disable){
 				this.now=num;
 				this.callback(this.now);
 				this.circle.style.left=(num/100)*this.box.clientWidth+'px'
