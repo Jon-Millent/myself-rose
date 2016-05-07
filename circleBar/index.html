@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" src="css/main.css"></style>
+</head>
+<body>
+	<h1 class="show" ><span id="show"></span><span class="some">%</span></h1>
+	<div id="box">
+		<div class="circle"></div>
+	</div>
+</body>
+<script type="text/javascript" src="js/circleBar.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var a=new circleBar();
+		a.init(box,function(px){
+			h1.innerHTML=px;
+		})
+	}
+</script>
+</html>
