@@ -13,4 +13,10 @@
 		a.init(box,function(px){
 			h1.innerHTML=px;//这里的回调函数会在每次发生变化的时候调用，px为当前进度
 		})
+		
+		a.moveTo(99);//将进度移动到99%
+		
+		a.disabled();//禁用拖动控件
+		
+		a.undisabled();//启用拖动控件
 ```
