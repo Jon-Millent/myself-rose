@@ -7,6 +7,46 @@
 ```html
 <script type="text/javascript" src="js/circleBar.js"></script>
 ```
+**引入css**
+```html
+<link rel="stylesheet" type="text/css" href="css/main.css">
+```
+**默认样式**
+```css
+#box{
+	width: 700px;
+	height: 4px;
+	background-color: #000;
+	margin: 100px auto;
+	position: relative;
+}
+#box .circle{
+	width: 20px;
+	height: 20px;
+	border:1px solid #52524D;
+	background-color: #EAEDE0;
+	position: absolute;
+	left: 0;
+	top: -8px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.show{
+	text-align: center;
+	font-size: 100px;
+	color: #333;
+	font-family: "微软雅黑";
+	font-weight: normal;
+}
+.some{
+	color: #52CBAD;
+	font-size: 50px;
+}
+.test{
+	width:400px;
+	margin: 0 auto;
+}
+```
 **调用javascript**
 ```javascript
     var a=new circleBar();
@@ -24,6 +64,83 @@
 **引入javascript**
 ```html
 <script type="text/javascript" src="js/rose.rili.js"></script>
+```
+**引入css**
+```html
+<link rel="stylesheet" type="text/css" href="css/main.css">
+```
+**默认样式**
+```css
+li{
+	list-style: none;
+}
+#rili{
+	width: 300px;
+	position: absolute;
+	background-color: #eee;
+}
+#rili .header{
+	width:100%;
+	height: 35px;
+	background-color: #1BBC9B;
+	border-radius: 6px;
+	overflow: hidden;
+	position: relative;
+}
+#rili .header .prev,#rili .header .next{
+	width: 40px;
+	height: 35px;
+	float: left;
+	text-align: center;
+	line-height: 35px;
+	cursor: pointer;
+}
+#rili .header .prev{
+	float: right;
+}
+#rili .header .inow{
+	width: 160px;
+	position: absolute;
+	left: 50%;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	margin-left: -80px;
+
+}
+#rili .content{
+	width: 100%;
+
+}
+#rili .content .theader{
+	width: 100%;
+	height: 30px;
+	background-color: #fff;
+	border-bottom: 1px solid #C8CACC;
+}
+#rili .content .theader li{
+	width: 14%;
+	float: left;
+	line-height: 30px;
+	text-align: center;
+	color: #333;
+}
+#rili .content .date{
+	width: 100%;
+	height:30px;
+	border-bottom: 1px solid #C8CACC;
+	background-color: #fff;
+}
+#rili .content .date li{
+	width: 14%;
+	float: left;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+#box{
+	margin:200px;
+}
 ```
 **调用javascript**
 ```javascript
