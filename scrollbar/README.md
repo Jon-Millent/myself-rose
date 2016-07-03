@@ -1,7 +1,7 @@
 #一个模拟滚动条的插件雏形
 
 **使用**
-```
+```javascript
 window.onload=function(){
 	var scroll = document.getElementById('scrollbar');
 	var a = new scrollbar(scroll);
