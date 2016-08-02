@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.ci{
+			border-radius: 50%;
+		}
+		.poi{
+			position: absolute;
+		}
+		.circle{
+			width: 600px;
+			height: 600px;
+			margin:  50px auto;
+			position: relative;
+			margin-bottom: 0;
+		}
+		.circle .content{
+			width: 600px;
+			height: 600px;
+			left:0;
+			top:0;
+			border-radius: 50%;
+			line-height: 600px;
+			text-align: center;
+			z-index: 6;
+		}
+		.right_cir,.left_cir{
+			width: 300px;
+			height: 600px;	
+			background-color: #000;
+			z-index: 3;
+			left:0px;
+			top:0px;
+			transition: all 1s ease;
+		}
+		.left_cir{
+			border-radius: 301px 0 0 301px;
+			transform-origin: right center;
+		}
+		.right_cir{
+			left:300px;
+			border-radius:0 301px 301px 0;
+			transform-origin: left center;
+			transform:  rotate(-180deg);
+		}
+		.zhe{
+			width: 302px;
+			height: 604px;
+			left:-1px;
+			top:-2px;	
+			background-color: #fff;
+			z-index: 4;
+			border-radius: 301px 0 0 301px;
+		}
+		.circle .slide{
+			width: 280px;
+			height: 560px;
+			background-color: #fff;
+		}
+		.left_cir .slide{
+			left:21px;
+			top:20px;
+			border-radius: 280px 0 0 280px;
+		}
+		.right_cir .slide{
+			left:-1px;
+			top:20px;
+			border-radius:0 280px 280px 0 ;
+		}
+	</style>
+</head>
+<body>
+	<div class="circle ci">
+		<div class="left_cir poi">
+			<div class="slide poi">
+				
+			</div>
+		</div>
+		<div class="right_cir poi">
+			<div class="slide poi">
+				
+			</div>
+		</div>
+		<div class="zhe poi">
+			
+		</div>
+		<div class="content poi">
+			35%
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var left = document.querySelector('.left_cir'); // 0 deg
+		var right = document.querySelector('.right_cir'); //-180deg
+		var zhe = document.querySelector('.zhe');
+
+		setTimeout(function(){
+			setDuShu(35,left,right,zhe)
+		},1000)
+		
+	}
+	function setDuShu(deg,a,b,c){
+		var data =3.6*deg;
+		if(data <= 180){
+			a.style.webkitTransform='rotate('+data+'deg)';
+			b.style.webkitTransform='rotate('+(-180+data)+'deg)';
+		}else{
+			c.style.display='none';
+			b.style.webkitTransform='rotate(0deg)';
+			a.style.webkitTransform='rotate('+data+'deg)';
+		}
+	}
+</script>
+</html>
