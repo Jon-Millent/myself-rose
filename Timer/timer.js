@@ -20,6 +20,10 @@
 	Factory.prototype.next=function(){
 		var nows = this.mainLine[this.now];
 		var self = this;
+		var last = 0;
+		if(this.now>0){
+			last = this.mainLine[this.now-1].time;
+		}
 		setTimeout(function(){
 			nows.fn();
 			if(self.now  >= self.mainLine.length-1){
@@ -28,7 +32,7 @@
 				self.now++;
 				self.next();
 			}
-		},nows.time)
+		},nows.time-last)
 	}
 	root.Timer = Factory;
 
